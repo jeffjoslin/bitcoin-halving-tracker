@@ -1,3 +1,5 @@
+#Bitcoin Halving Tracker
+
 import streamlit as st
 import requests
 import time
@@ -9,7 +11,7 @@ def get_block_count():
     return int(response.text)
 
 def main():
-    st.title("Bitcoin Halving Countdown")
+    st.title("Bitcoin Halving Tracker")
 
     m1, m2, m3 = st.columns((1,1,1))
     halving_block_count = m1.metric(label = 'Halving Block Count', value = '840,000')
